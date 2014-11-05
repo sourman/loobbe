@@ -1,0 +1,17 @@
+class Cell
+	can be poked, 
+	must recieve more than x amount of pokes to activate
+	the more pokes recieved from a certain direction the more responsive this cell becomes to the pokes
+	can be killed if it pokes too much
+	can poke multiple cells simultaniously
+	poking depletes the surroundings from ability to poke a little bit
+	has a location
+	is more affected by pokes of close by axons
+	can have up to 100,000 dendrites
+	dendrites becomes more receptive the more pokes recieved.
+
+axon
+	has beginning
+	has end
+
+
