@@ -4,7 +4,7 @@ class Cell
 	the more pokes recieved from a certain direction the more responsive this cell becomes to the pokes
 	can be killed if it pokes too much
 	can poke multiple cells simultaniously
-	poking depletes the surroundings from ability to poke a little bit
+	poking depletes the surrounding resources slightly.
 	has a location
 	is more affected by pokes of close by axons
 	can have up to 100,000 dendrites
@@ -14,4 +14,21 @@ axon
 	has beginning
 	has end
 
+Concept Reward:
+	Reward is global. All cells recieve reward or all cells do not recieve reward
+
+Concept Starting energy
+	we start with a set amount of energy that is external but is delivered to the cells that require it
+
+task
+	Some metrics upon which more energy is afforded to the cells
+	the task is given through interface neurons? not sure
+	the task will not be preprogrammed in the loobbe design.
+	what triggers specilization?
+
+
+Success level
+	adaptation
+	specilization
+	self preservation
 
