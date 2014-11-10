@@ -1,34 +1,56 @@
 class Cell
-	can be poked, 
-	must recieve more than x amount of pokes to activate
-	the more pokes recieved from a certain direction the more responsive this cell becomes to the pokes
-	can be killed if it pokes too much
-	can poke multiple cells simultaniously
-	poking depletes the surrounding resources slightly.
-	has a location
-	is more affected by pokes of close by axons
-	can have up to 100,000 dendrites
-	dendrites becomes more receptive the more pokes recieved.
+        can be poked,
+        must receive more than x amount of pokes to activate
+        the more pokes received from a certain direction the more responsive this cell becomes to the pokes
+        can be killed if it pokes too much
+        can poke multiple cells simultaneously
+        poking depletes the surrounding resources slightly.
+        has a location
+        is more affected by pokes of close by axons
+        can have up to 100,000 dendrites
+        dendrites becomes more receptive the more pokes received.
+        cells have a baseline firing rate. more stimulation from surrounding cells causes faster firing
 
 axon
-	has beginning
-	has end
+        has beginning
+        has end 
+	uses resources in surrounding regions along the axon to propagate impulse along its length
 
 Concept Reward:
-	Reward is global. All cells recieve reward or all cells do not recieve reward
+        Reward is global. All cells receive reward or all cells do not receive reward
 
 Concept Starting energy
-	we start with a set amount of energy that is external but is delivered to the cells that require it
+        we start with a set amount of energy that is external but is delivered to the cells that require it
 
 task
-	Some metrics upon which more energy is afforded to the cells
-	the task is given through interface neurons? not sure
-	the task will not be preprogrammed in the loobbe design.
-	what triggers specilization?
+        Some metrics upon which more energy is afforded to the cells
+        the task is given through interface neurons? not sure
+        the task will not be programmed in the loobbe design.
+        what triggers specialization?
 
 
-Success level
-	adaptation
-	specilization
-	self preservation
+Success
+        level
+        adaptation
+        specialization
+        self preservation
+
+Resources
+        Resources at a none supply location diffuse like a salt diffuses in water
+
+Physical limit
+        Each cell occupies a finite amount of space. Each cell cannot grow beyond a certain size limit
+        the total size of the cells cannot exceed a certain limit
+
+System input
+        resources
+        task (impulses)
+
+System output
+        impulses
+
+Interpreter
+        interprets impulses in a specified way that is not formally known to the cells
+
+All modules have state methods so that the internal workings of the lobe can be  viewed
 
