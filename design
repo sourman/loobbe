@@ -1,6 +1,8 @@
-class Cell:
+Cell:
         can be poked,
-        must receive more than x amount of pokes to activate
+        Must reach firing threshold before firing
+	firing tank is filled up faster when cell is poked
+	baseline firing rate is determined by the replenishment rate and the threshold 
         the more pokes received from a certain direction the more responsive this cell becomes to the pokes
         can be killed if it pokes too much upper frequency limit before the cell physicaly dies system wide
         can poke multiple cells simultaneously
@@ -28,7 +30,6 @@ task:
         the task will not be programmed in the loobbe design.
         what triggers specialization?
 
-
 Success:
         level
         adaptation
@@ -55,3 +56,13 @@ Interpreter:
 
 All modules have state methods so that the internal workings of the lobe can be  viewed
 
+Cell
+	Monitors
+		Axons dendrites connections - random start
+		Glucose - energy for cell
+		Oxygen - reward
+		Electrolyts - Cells send impulses using electrolytes
+
+	Controls
+		Impulse - by depolarising impulse travels along axon
+		Electrolyte pumps - use glucose to restablish nominal membrane potential after nuron fires
