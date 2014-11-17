@@ -67,3 +67,10 @@ Cell
 		Impulse - by depolarising impulse travels along axon
 		Electrolyte pumps - use glucose to restablish nominal membrane potential after nuron fires
 		Suicide - Programmed cell death. Occurs when resources run low, or cell is over burdended
+		Axon growth - Random and length and direction and connections assigned initially
+		Synapses - nurons that fire together, wire together. Nurons that fire apart, wire apart
+
+Lobe
+	Monitors
+		Interface cell output - lobe external connections connect to members of lobe
+		Resource levels - has a way of measuring resources floating around cells
