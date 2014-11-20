@@ -56,7 +56,7 @@ Interpreter:
 
 All modules have state methods so that the internal workings of the lobe can be  viewed
 
-Cell
+Neuron
 	Monitors
 		Dendrite connections - random start, spread around area of cell head. more receptive to nurons
 			that fire in sync wiht this nuron. slowly goes back to original strength in decay
