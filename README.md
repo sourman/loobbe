@@ -1,7 +1,9 @@
 loobbe
 ======
 
-## Neural Network
+A neural neural network
+
+## Description
 
 loobbe attempts to mimic brain tissue.
 Neurons poses few modes of communication. The main mode of neuron-neuron
@@ -19,7 +21,7 @@ can be visualized to create beautiful visuals.
 
 ## About
 
-loobbe was inspired by my teacher Dr. Hubert deBruin. [Dr. H. deBruin][1]
+loobbe was inspired by my teacher [Dr. Hubert deBruin][1]. Dr. H. deBruin
 explained that the label "neural network" is applied liberally in Software.
 In reality neurons do not poses complex inputs and outputs. Neurons
 function mainly as integrators of the stimulus received at dendrites.

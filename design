@@ -58,19 +58,28 @@ All modules have state methods so that the internal workings of the lobe can be 
 
 Cell
 	Monitors
-		Axons dendrites connections - random start
+		Dendrite connections - random start, spread around area of cell head. more receptive to nurons
+			that fire in sync wiht this nuron. slowly goes back to original strength in decay
+			pattern if pattern not repeated
 		Glucose - energy for cell
 		Oxygen - reward
-		Electrolyts - Cells send impulses using electrolytes
+		Electrolyts - Cells send impulses using electrolytes. impulses bring cell closer to firing
+		ATP - ATP to be used by electrolyte pumps to restore baseline voltage
+
 
 	Controls
 		Impulse - by depolarising impulse travels along axon
 		Electrolyte pumps - use glucose to restablish nominal membrane potential after nuron fires
 		Suicide - Programmed cell death. Occurs when resources run low, or cell is over burdended
-		Axon growth - Random and length and direction and connections assigned initially
+		Axon growth - Random. length and direction and connections assigned initially
 		Synapses - nurons that fire together, wire together. Nurons that fire apart, wire apart
 
 Lobe
 	Monitors
-		Interface cell output - lobe external connections connect to members of lobe
+		Output neurons - "motor neurons" lobe external connections connect to members of lobe
 		Resource levels - has a way of measuring resources floating around cells
+		Task - file passed, no specific format
+
+	Controls
+		Glucose - provide glucose to the cells in the lobe
+		Input neurons - Sensory neurons that get singals from outside of lobe
