@@ -56,6 +56,26 @@ Interpreter:
 
 All modules have state methods so that the internal workings of the lobe can be  viewed
 
+
+Manageing communication
+	 * Management of who pokes who when cannot be designed hastily. There are
+	 * two problems that must be adderessed. The first is the atomicity of
+	 * firing. The second is program complexity.
+	 *
+	 * Atomicuty of firing is needed to ensure that when an axon fires, all its
+	 * target cells recieve the impulse within approxmatly the same time.
+	 * This is neccessary because the behavior of cells is largely dependant on
+	 * the timing of the firining. Much information is carried in the frequency
+	 * of firing in many types of neurons
+	 *
+	 * Program complexity must also be considered since the human brain contains
+	 * more than 1 billion neurons. Each with up to 100 thousand target neurons
+	 * at the terminal end of each axon. We should avoid creating 1 billion
+	 * linked lists, each with 100 thousand items ti be updated in every
+	 * iteration of the program
+
+
+
 Neuron
 	Monitors
 		Dendrite connections - random start, spread around area of cell head. more receptive to nurons

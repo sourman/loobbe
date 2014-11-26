@@ -51,4 +51,10 @@ class Cell{
 	 */
 	 Na
 
+	 public:
+	/*
+	 * the cell is poked when a nearby axon terminal depolarizes.
+	 */
+	 poke()
+
 }
