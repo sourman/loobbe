@@ -13,12 +13,15 @@ class Cell{
 		// The cell is poked when a nearby axon terminal depolarizes.
 		Poke();
 
-		// A way for us to destroy cells in a natural way.
+		// A way to destroy cells in a natural way.
 		// Perhaps the cell gives up its resources, or maybe it releases toxins that
 		// kill surrounding cells before the destructor is called
-		Kill();
+		Die();
 
 	private:
+		// Depolarize cell consuming surrounding electrolytes as they flood into cell
+		// Trigger a depolarization cascade down axon to target cells
+		Depolarize();
 
 		// Glucose concentration in the cell. Glucose is broken by mitochondira to
 		// bind phosphorus with Adenason diphosphate to create adenason triphosphate
@@ -32,14 +35,14 @@ class Cell{
 		// Oxygen concentration in the cell. used by mitochondria in creation of ATP
 		Oxygen
 
-		// threshold of triggering this cell, the voltage at which the passive gates
+		// Threshold of triggering this cell, the voltage at which the passive gates
 		// of this cell breakdown and the cell fires
 		threshold
 
 		// The voltage potential of this cell relative outside the cell
 		voltage
 
-		// affluence of neibouring cells this determines how effective an impulse
+		// Affluence of neibouring cells this determines how effective an impulse
 		// from each neighbor is in triggering this cell
 		affluence
 
