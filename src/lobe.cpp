@@ -52,4 +52,7 @@ class Cell{
 		// Na+ concentration in cell
 		Na
 
+		// Temperature of the axon. Change in temperature has a strong effect on the
+		// duration and conduction velocity of the impulse
+		temperature
 }
