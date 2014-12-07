@@ -1,58 +1,58 @@
 
 #include "iostream"
 
-using namespace std
+enum class Death {Normal, Toxic};
 
 class Cell{
 	public:
 		Cell();
 		~Cell();
 
-		std::string Get_ID();
+		unsigned long Get_ID(unsigned long id);
 
 		// The cell is poked when a nearby axon terminal depolarizes.
-		Poke();
+		void Poke_Me(void);
 
 		// A way to destroy cells in a natural way.
 		// Perhaps the cell gives up its resources, or maybe it releases toxins that
 		// kill surrounding cells before the destructor is called
-		Die();
+		void Die(Death death_type);
 
 	private:
 		// Depolarize cell consuming surrounding electrolytes as they flood into cell
 		// Trigger a depolarization cascade down axon to target cells
-		Depolarize();
+		void Depolarize(void);
 
 		// Glucose concentration in the cell. Glucose is broken by mitochondira to
 		// bind phosphorus with Adenason diphosphate to create adenason triphosphate
 		// commonly known as ATP
-		glucose
+		unsigned int glucose;
 
 		// ATP concentration in the cell. used by active ion pumps in restoring the
 		// cell to pre-impulse potential (around -60 mV)
-		ATP
+		unsigned ATP;
 
 		// Oxygen concentration in the cell. used by mitochondria in creation of ATP
-		Oxygen
+		unsigned Oxygen;
 
 		// Threshold of triggering this cell, the voltage at which the passive gates
 		// of this cell breakdown and the cell fires
-		threshold
+		unsigned threshold;
 
 		// The voltage potential of this cell relative outside the cell
-		voltage
+		unsigned voltage;
 
 		// Affluence of neibouring cells this determines how effective an impulse
 		// from each neighbor is in triggering this cell
-		affluence
+		unsigned affluence;
 
 		// Ca2+ concentration in cell
-		Ca
+		unsigned Ca;
 
 		// Na+ concentration in cell
-		Na
+		unsigned Na;
 
-		// Temperature of the axon. Change in temperature has a strong effect on the
+		// Temperature. Change in temperature has a strong effect on the
 		// duration and conduction velocity of the impulse
-		temperature
-}
+		unsigned temperature;
+};
