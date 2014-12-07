@@ -1,6 +1,3 @@
-
-#include "iostream"
-
 enum class Death {Normal, Toxic};
 
 class Cell{
@@ -8,20 +5,20 @@ class Cell{
 		Cell();
 		~Cell();
 
-		unsigned long Get_ID(unsigned long id);
+		unsigned long get_ID(unsigned long id);
 
 		// The cell is poked when a nearby axon terminal depolarizes.
-		void Poke_Me(void);
+		void poke_me(void);
 
 		// A way to destroy cells in a natural way.
 		// Perhaps the cell gives up its resources, or maybe it releases toxins that
 		// kill surrounding cells before the destructor is called
-		void Die(Death death_type);
+		void die(Death death_type);
 
 	private:
 		// Depolarize cell consuming surrounding electrolytes as they flood into cell
 		// Trigger a depolarization cascade down axon to target cells
-		void Depolarize(void);
+		void depolarize(void);
 
 		// Glucose concentration in the cell. Glucose is broken by mitochondira to
 		// bind phosphorus with Adenason diphosphate to create adenason triphosphate
