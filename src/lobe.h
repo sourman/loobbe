@@ -1,6 +1,29 @@
 enum class Death {Normal, Toxic};
 
-class Cell{
+class Lobe {
+	public:
+		bool add_cells(unsigned long num);
+		bool connect_randomly();
+
+		// select cells to handle input
+		bool select_input(cells that will be connected to input);
+
+		bool select_output(ccells that will be connected to output);
+
+		// pointer to device from which formatted input will be read
+		bool input(*file,stream,socket, whatever you like);
+
+		// give energy too the lobe to rward it for success
+		bool replenish_resources();
+
+		// destroy the lobe and all owned resources
+		bool deastroy();
+
+	private:
+		Cell **cell_list_; // linked list, will use std::list
+}
+
+class Cell {
 	public:
 		Cell();
 		~Cell();
