@@ -4,7 +4,7 @@ using std::cin
 using std::endl
 #endif
 #include <iostream>
-#include "lobe.hpp"
+#include "lobe.h"
 
 using namespace std;
 

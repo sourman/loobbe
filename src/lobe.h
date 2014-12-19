@@ -2,21 +2,21 @@ enum class Death {Normal, Toxic};
 
 class Lobe {
 	public:
-		bool add_cells(unsigned long num);
+		bool add_x_cells(unsigned long num);
 		bool connect_randomly();
 
-		// select cells to handle input
-		bool select_input(cells that will be connected to input);
-
-		bool select_output(ccells that will be connected to output);
+		// select cells to handle input and output
+		bool select_input_cells(unsigned long *cell_IDs);
+		bool select_output_cells((unsigned long *cell_IDs);
 
 		// pointer to device from which formatted input will be read
 		bool input(*file,stream,socket, whatever you like);
+		bool output(ofstream *stream,socket, whatever you like);
 
 		// give energy too the lobe to rward it for success
-		bool replenish_resources();
+		bool feed_me();
 
-		// destroy the lobe and all owned resources
+		// destroy the lobe and sub structures
 		bool deastroy();
 
 	private:
