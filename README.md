@@ -21,15 +21,15 @@ can be visualized to create beautiful visuals.
 
 ## About
 
-loobbe was inspired by my teacher [Dr. Hubert deBruin][1]. Dr. H. deBruin
-explained that the label "neural network" is applied liberally in Software.
-In reality neurons do not poses complex inputs and outputs. Neurons
-function mainly as integrators of the stimulus received at dendrites.
-Each neuron can be connected up to 100,000 other neurons. The intelligence
-does not live in the neurons but in the communication between the neurons.
-Somehow out of the disorder of a billion neurons firing we have coherent
-thoughts. I set out to create a software network that recreates this
-"order out of disorder" phenomenon in software.
+loobbe was inspired by [Dr. Hubert deBruin][1]. The label "neural network"
+is applied liberally in Software. In reality neurons do not poses complex
+inputs and outputs. Neurons function mainly as integrators of the stimulus
+received at dendrites. Each neuron can be connected up to 100,000 other
+neurons. The intelligence does not live in the neurons but in the
+communication between the neurons. Somehow out of the disorder of a billion
+neurons firing we have coherent thoughts. The raison de etre of this project
+is to create a software network that recreates this "order out of disorder"
+phenomenon.
 
 MIT License. Copyright (c) 2014-2015 Ahmed Mansour.
 
