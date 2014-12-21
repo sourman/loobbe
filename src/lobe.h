@@ -1,27 +1,9 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
 enum class Death {Normal, Toxic};
-
-class Lobe {
-	public:
-		bool add_x_cells(unsigned long num);
-		bool connect_randomly();
-
-		// select cells to handle input and output
-		bool select_input_cells(unsigned long *cell_IDs);
-		bool select_output_cells((unsigned long *cell_IDs);
-
-		// pointer to device from which formatted input will be read
-		bool input(*file,stream,socket, whatever you like);
-		bool output(ofstream *stream,socket, whatever you like);
-
-		// give energy too the lobe to rward it for success
-		bool feed_me();
-
-		// destroy the lobe and sub structures
-		bool deastroy();
-
-	private:
-		Cell **cell_list_; // linked list, will use std::list
-}
 
 class Cell {
 	public:
@@ -75,4 +57,27 @@ class Cell {
 		// Temperature. Change in temperature has a strong effect on the
 		// duration and conduction velocity of the impulse
 		unsigned temperature;
+};
+
+class Lobe {
+	public:
+		bool add_x_cells(unsigned long num);
+		bool connect_randomly();
+
+		// select cells to handle input and output
+		bool select_input_cells(unsigned long *cell_IDs);
+		bool select_output_cells(unsigned long *cell_IDs);
+
+		// pointer to device from which formatted input will be read
+		bool input(ofstream *stream);
+		bool output(ofstream *stream);
+
+		// give energy too the lobe to rward it for success
+		bool feed_me();
+
+		// destroy the lobe and sub structures
+		bool deastroy();
+
+	private:
+		Cell **cell_list_; // linked list, will use std::list
 };
