@@ -18,20 +18,21 @@ int main (int argc, char *argv[])
 	if (argc <= 1)
 		lobe->add_x_cells(k_DefaultNumCells);
 	else
-		lobe->add_x_cells( strtol(argv[1].c_str(),0,10));
+		lobe->add_x_cells(strtol(argv[1],0,10));
 		// The above  line should be like the following, but because of flimsy
 		// cygwin port of the compiler we cant get full C++11 functionality
 		// lobe->add_x_cells(std::stol(argv[1]));
 
-	for (int i = 0; i < k_MaxCells; i++) {
-		cells[i] = new Cell();
-	}
+	// Random connect
+	lobe->connect_randomly();
+	lobe->place_cells_randomly();
 
+	// TODO: add command line args to select input and output cells
+	unsigned long input_cell_ids[] { 1, 2, 3, 5, 8, 9 };
+	unsigned long output_cell_ids[] { 500, 501, 502, 503, 504, 505 };
 
-	for (int i = 0; i < k_MaxCells; i++) {
-		cells[i]->random_connect;
-		cells[i]->poke_me();
-	}
+	lobe->select_input_cells(input_cell_ids);
+	lobe->select_output_cells(output_cell_ids);
 
 	cout << "The world is a strange place. Here is one more stranger" << endl;
 	return 0;

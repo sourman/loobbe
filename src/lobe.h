@@ -63,6 +63,7 @@ class Lobe {
 	public:
 		bool add_x_cells(unsigned long num);
 		bool connect_randomly();
+		bool place_cells_randomly();
 
 		// select cells to handle input and output
 		bool select_input_cells(unsigned long *cell_IDs);
