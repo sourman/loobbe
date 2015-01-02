@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
 
 	// Random connect
 	lobe->connect_randomly();
-	lobe->place_cells_randomly();
+	lobe->place_cells_anywhere();
 
 	// TODO: add command line args to select input and output cells
 	unsigned long input_cell_ids[] { 1, 2, 3, 5, 8, 9 };
