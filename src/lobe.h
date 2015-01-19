@@ -3,6 +3,8 @@
 
 using namespace std;
 
+struct Position{int x, y, z;};
+
 enum class Death {Normal, Toxic};
 
 class Cell {
@@ -11,6 +13,9 @@ class Cell {
 		~Cell();
 
 		unsigned long get_ID(unsigned long id);
+
+		// Specify cell position in lobe
+		bool place_cell(unsigned int ID, struct Position *position);
 
 		// The cell is poked when a nearby axon terminal depolarizes.
 		void poke_me(void);
@@ -63,7 +68,7 @@ class Lobe {
 	public:
 		bool add_x_cells(unsigned long num);
 		bool connect_randomly();
-		bool place_cells_randomly();
+		bool place_cells_anywhere();
 
 		// select cells to handle input and output
 		bool select_input_cells(unsigned long *cell_IDs);
@@ -79,6 +84,10 @@ class Lobe {
 		// destroy the lobe and sub structures
 		bool deastroy();
 
+		bool for_all_cells(void * function, void** args);
+
 	private:
 		Cell **cell_list_; // linked list, will use std::list
+
+		unsigned long max_num_connect_;
 };

@@ -1,5 +1,5 @@
 #include <iosetream>
-#include "lobe.hpp"
+#include "lobe.h"
 
 using namespace std;
 
@@ -38,3 +38,10 @@ bool Lobe::select_inpput_cells(unsigned long *cell_IDs)
 	for (int i = 0; i < num of imput cells; i++)
 		cell_ID_to_cell(cell_IDs[i])->connect(location);
 }
+
+bool Lobe::place_cells_anywhere();
+{
+	for_all_cells(place_cell, position )
+}
+
+boot place_cell(cell_ID ID, Position *position);
