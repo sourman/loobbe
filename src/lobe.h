@@ -87,6 +87,10 @@ class Lobe {
 		bool for_all_cells(void * function, void** args);
 
 	private:
+		unsigned long num_cells__();
+
+		unsigned long num_cells_;
+
 		Cell **cell_list_; // linked list, will use std::list
 
 		unsigned long max_num_connect_;

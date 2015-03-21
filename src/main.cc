@@ -5,6 +5,7 @@ using std::endl
 #endif
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "lobe.h"
 #include <cstdlib>
 
@@ -19,9 +20,6 @@ int main (int argc, char *argv[])
 		lobe->add_x_cells(k_DefaultNumCells);
 	else
 		lobe->add_x_cells(strtol(argv[1],0,10));
-		// The above  line should be like the following, but because of flimsy
-		// cygwin port of the compiler we cant get full C++11 functionality
-		// lobe->add_x_cells(std::stol(argv[1]));
 
 	// Random connect
 	lobe->connect_randomly();
