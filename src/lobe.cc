@@ -20,10 +20,10 @@ bool Lobe::connect_randomly()
 {
 	// TODO: simple expensive implenetation of cell connection
 	// to be replaced in the future with fast intercellular communcation objects
-	int i;
 	unsigned long num_cells = this->num_cells__();
-	for (i = 0; i < num_cells; i++)
-		for (j = 0; j < max_num_connect_; j++)
+
+	for (int i = 0; i < num_cells; i++)
+		for (int j = 0; j < max_num_connect_; j++)
 			cell_list_[i]->connect((num_cells * rand()) % num_cells);
 	return false;
 }
