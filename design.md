@@ -13,7 +13,7 @@ Cell:
         dendrites become more receptive the more pokes received.
         cells have a baseline firing rate. more stimulation from surrounding cells causes faster firing
 
-axon:
+Axon:
         has beginning
         has end 
 	uses resources in surrounding regions along the axon to propagate impulse along its length
@@ -24,7 +24,7 @@ Concept Reward:
 Concept Starting energy:
         we start with a set amount of energy that is external but is delivered to the cells that require it
 
-task:
+Task:
         Some metrics upon which more energy is afforded to the cells
         the task is given through interface neurons? not sure
         the task will not be programmed in the loobbe design.
@@ -57,7 +57,7 @@ Interpreter:
 All modules have state methods so that the internal workings of the lobe can be  viewed
 
 
-Manageing communication
+Managing communication
 	 * Management of who pokes who when cannot be designed hastily. There are
 	 * two problems that must be adderessed. The first is the atomicity of
 	 * firing. The second is program complexity.
@@ -71,15 +71,15 @@ Manageing communication
 	 * Program complexity must also be considered since the human brain contains
 	 * more than 1 billion neurons. Each with up to 100 thousand target neurons
 	 * at the terminal end of each axon. We should avoid creating 1 billion
-	 * linked lists, each with 100 thousand items ti be updated in every
+	 * linked lists, each with 100 thousand items to be updated in every
 	 * iteration of the program
 
 
 
 Neuron
 	Monitors
-		Dendrite connections - random start, spread around area of cell head. more receptive to nurons
-			that fire in sync wiht this nuron. slowly goes back to original strength in decay
+		Dendrite connections - random start, spread around area of cell head. More receptive to neurons
+			that fire in sync with this neuron. Slowly goes back to original strength in decay
 			pattern if pattern not repeated
 		Glucose - energy for cell
 		Oxygen - reward
