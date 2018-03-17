@@ -1,4 +1,9 @@
 enum class Death {Normal, Toxic};
+struct postion {
+	unsigned int x;
+	unsigned int y;
+	unsigned int z;
+};
 
 class Cell {
 	public:
@@ -20,6 +25,11 @@ class Cell {
 		void die(Death death_type);
 
 	private:
+		// Usually neurons stay put, but that is not always the case.
+		// in Neurogensis, new neurons are on the move. This pluse the
+		// propagation time delay between neurons are influenced by postion
+		struct position position;
+
 		// Depolarize cell consuming surrounding electrolytes as they
 		// flood into cell Trigger a depolarization cascade down axon
 		// to target cells
